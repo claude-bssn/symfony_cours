@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExoController!{% endblock %}
+
+{% block body %}
+
+{% if name is defined %}
+    <p> Coucou  {{ name }} </p>
+{% endif %}
+<div class="example-wrapper">
+
+    {% if numSecu is defined %}
+        <h1>num de sécu  {{ numSecu }}! ✅</h1>
+    {% endif %}
+
+    
+</div>
+{% endblock %}
