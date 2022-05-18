@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
-
+<!-- CSS only -->
 {% block title %}Hello ExoController!{% endblock %}
 
 {% block body %}
-{% form start %}
+
 
 {% for letter in tabAlpha %}
-    {{letter}} 
+   | {{letter}} 
 {% endfor %}
 
 {% endblock %}

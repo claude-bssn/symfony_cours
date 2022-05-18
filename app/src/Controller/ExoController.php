@@ -5,10 +5,11 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+#[Route('/exo',
+    name: 'exo_')]
 class ExoController extends AbstractController
 {
-    #[Route('/exo/{name}', 
+    #[Route('/{name}', 
     name: 'app_exo',
     methods: ['GET'])]
     public function app_exo($name): Response
@@ -18,7 +19,7 @@ class ExoController extends AbstractController
         ]);
     }
 
-    #[Route('/exo/numero/{numSecu}', 
+    #[Route('/numero/{numSecu}', 
     name: 'numSecuSoc',
     methods: ['GET'],
     requirements: [
@@ -33,7 +34,7 @@ class ExoController extends AbstractController
         ]);
     }
 
-    #[Route('exo/alpha/tab',
+    #[Route('/alpha/tab',
     name: 'tableauAlpha',
     )]
     public function tableauAlpha(): Response
